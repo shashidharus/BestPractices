@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dp"
+    tools:context="com.teamtreehouse.oslist.AboutUsPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Key OutComes Tracker Tool"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:padding="2dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:id="@+id/about1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="On behalf of Best Practices To Graduate, this Tool was developed by the following Student Developers at University of Illinois at Chicago: "
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:id="@+id/about2"
+        android:layout_below="@+id/about1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Peeyush Pandey"
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:id="@+id/student1"
+        android:layout_below="@+id/about2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Priyanka Prakash"
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/student2"
+        android:layout_below="@id/student1"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="http://bestpracticestograduate.org/"
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:id="@+id/websiteLink"
+        android:layout_below="@id/student2"
+        android:autoLink="web"/>
+
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Contact Us"
+        android:textColor="#0000EE"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+
+        android:layout_marginTop="30dp"
+        android:id="@+id/contactButton"
+        android:layout_below="@id/websiteLink"
+        />
+
+</RelativeLayout>

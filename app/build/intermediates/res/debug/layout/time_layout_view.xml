@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newTagTableRow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <TextView android:id="@+id/newDayTag"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size1"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:hint="day"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        ></TextView>
+    <TextView android:id="@+id/newStartTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size1"
+        android:textColor="#000"
+        android:hint="Start Time"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+       ></TextView>
+    <TextView android:id="@+id/newEndTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size1"
+        android:textColor="#000"
+        android:hint="End Time"
+        android:layout_marginTop="5dp"
+       ></TextView>
+
+</TableRow><!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/time_layout_view.xml -->

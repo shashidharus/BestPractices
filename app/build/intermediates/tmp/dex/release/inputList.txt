@@ -1,0 +1,5 @@
+C:\Users\Peeyush\AndroidStudioProjects\BestPractices\app\build\intermediates\classes\release
+C:\Users\Peeyush\AndroidStudioProjects\BestPractices\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-433405c6b4ee1bdbd2864ffef2777f9e33b7a9df.jar
+C:\Users\Peeyush\AndroidStudioProjects\BestPractices\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-e45e91452c492f75df629d7a9fb0dc637ec3acfa.jar
+C:\Users\Peeyush\AndroidStudioProjects\BestPractices\app\build\intermediates\pre-dexed\release\classes-bca62d7d9e394c070a09d317356c296238841204.jar
+C:\Users\Peeyush\AndroidStudioProjects\BestPractices\app\build\intermediates\pre-dexed\release\classes-405973a96b49d4a909cd92cb25547f2c1405e630.jar

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Classes History"
+        android:textStyle="bold"
+        android:gravity="top|center_horizontal"
+        android:textSize="18dp"
+        android:id="@+id/classesHistory"/>
+</LinearLayout>
+<!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/history_classes_layout.xml -->

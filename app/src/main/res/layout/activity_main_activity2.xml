@@ -1,0 +1,441 @@
+
+
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="fill_parent" android:layout_width="fill_parent"
+     tools:context="com.teamtreehouse.oslist.MainActivity1"
+
+     android:id="@+id/new_tag_view"
+     android:background="@drawable/border">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Active Classes"
+         android:textStyle="bold"
+         android:gravity="top|center_horizontal"
+         android:textSize="18dp"
+         android:visibility="gone"
+         android:id="@+id/activeClasses"/>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="InActive Classes"
+         android:textStyle="bold"
+         android:gravity="top|center_horizontal"
+         android:textSize="18dp"
+         android:visibility="gone"
+         android:id="@+id/historyClasses"/>
+    <Button android:layout_width="wrap_content"
+
+        android:id="@+id/edit"
+        android:text="Edit"
+
+        android:background="@drawable/mybuttons"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text=""
+        android:gravity="left"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/edit"
+        android:id="@+id/blank" />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Class Name:"
+         android:layout_marginRight="60dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+
+         android:id="@+id/classNameText"
+         android:layout_below="@id/blank"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginBottom="3dp"
+            android:background="#ccc"
+            android:textColor="#000"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/classNameView"
+            android:layout_toRightOf="@id/classNameText"
+            android:layout_below="@+id/blank"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Course ID:"
+         android:layout_marginRight="74dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/courseIDText"
+         android:layout_below="@id/classNameText"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size"
+            android:layout_marginBottom="3dp"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/courseNumberView"
+            android:layout_toRightOf="@id/courseIDText"
+            android:layout_below="@+id/classNameView"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Start Date:"
+         android:layout_marginRight="74dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/startDateText"
+         android:layout_below="@id/courseIDText"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ccc"
+         android:textColor="#000"
+         android:textSize="@dimen/text_size"
+         android:layout_marginBottom="3dp"
+         android:gravity="left"
+         android:paddingRight="10dp"
+         android:id="@+id/startDateView"
+         android:layout_toRightOf="@id/startDateText"
+         android:layout_below="@+id/courseNumberView"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="End Date:  "
+         android:layout_marginRight="74dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/endDateText"
+         android:layout_below="@id/startDateText"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ccc"
+         android:textColor="#000"
+         android:textSize="@dimen/text_size"
+         android:layout_marginBottom="3dp"
+         android:gravity="left"
+         android:paddingRight="10dp"
+         android:id="@+id/endDateView"
+         android:layout_toRightOf="@id/endDateText"
+         android:layout_below="@+id/startDateView"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Instructor:"
+         android:layout_marginRight="73dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/instructorLabel"
+         android:layout_below="@id/endDateText"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:gravity="left"
+            android:layout_marginBottom="3dp"
+            android:textSize="@dimen/text_size"
+            android:background="#ccc"
+            android:paddingRight="10dp"
+            android:layout_below="@id/endDateView"
+            android:layout_toRightOf="@id/instructorLabel"
+            android:id="@+id/instructorView" />
+
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Teaching Assistant:"
+         android:layout_marginRight="10dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/taLabel"
+         android:layout_below="@id/instructorLabel"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size"
+            android:background="#ccc"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/teachingAssistantView"
+            android:layout_toRightOf="@id/taLabel"
+            android:layout_below="@id/instructorView">
+        </TextView>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Class Days:"
+         android:layout_marginRight="10dp"
+         android:layout_marginBottom="3dp"
+         android:textColor="#000"
+         android:gravity="left"
+         android:textSize="@dimen/text_size"
+         android:textStyle="bold"
+         android:paddingRight="10dp"
+         android:id="@+id/classDaysLabel"
+         android:layout_below="@id/taLabel" />
+
+            <Button
+                android:id="@+id/monday"
+                android:text="Mon"
+                android:background="@drawable/mybuttons1"
+                style="@style/buttonsWeek"
+
+                android:layout_below="@+id/teachingAssistantView"
+                />
+            <Button
+                android:id="@+id/tuesday"
+                android:text="Tue"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_toRightOf="@+id/monday"
+                android:layout_below="@+id/teachingAssistantView" />
+
+            <Button
+                android:id="@+id/wednesday"
+                android:text="Wed"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_toRightOf="@+id/tuesday"
+                android:layout_below="@+id/teachingAssistantView"
+                />
+
+            <Button
+                android:id="@+id/thursday"
+                android:text="Thu"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_toRightOf="@+id/wednesday"
+                android:layout_below="@+id/teachingAssistantView"
+                ></Button>
+            <Button
+                android:id="@+id/friday"
+                android:text="Fri"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_toRightOf="@+id/thursday"
+                android:layout_below="@+id/teachingAssistantView"
+                />
+            <Button
+                android:id="@+id/saturday"
+                android:text="Sat"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_toRightOf="@+id/friday"
+                android:layout_below="@+id/teachingAssistantView"
+                ></Button>
+            <Button
+                android:id="@+id/sunday"
+                android:text="Sun"
+                android:layout_toRightOf="@+id/saturday"
+                style="@style/buttonsWeek"
+                android:background="@drawable/mybuttons1"
+                android:layout_below="@+id/teachingAssistantView"
+                ></Button>
+
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monday"
+        android:layout_centerHorizontal="true"
+         android:id="@+id/schedulesTableLayout"></TableLayout>
+
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schedulesTableLayout"
+        android:id="@+id/tableLayout1"
+        android:stretchColumns="1">
+        <TableRow>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance Rate(Weekly)"
+        android:textColor="#000"
+        android:gravity="left"
+        android:layout_below="@id/schedulesTableLayout"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/attendanceRate" />
+
+    <TextView android:layout_width="wrap_content"
+        android:id="@+id/attendanceRateView"
+        android:layout_height="wrap_content" android:layout_span="3"
+        android:inputType="numberDecimal" android:layout_weight="1"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+
+        android:background="#ccc">
+
+    </TextView>
+        </TableRow>
+    <TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance Rate till today(Term)"
+        android:textColor="#000"
+        android:gravity="left"
+        android:textSize="@dimen/text_size"
+
+        android:paddingRight="10dp"
+        android:layout_below="@+id/attendanceRate"
+        android:id="@+id/termAttendanceRate" />
+
+        <TextView android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content" android:layout_span="3"
+            android:inputType="numberDecimal" android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:layout_marginBottom="5dp"
+
+            android:background="#ccc"
+        android:id="@+id/termAttendanceRateView" />
+    </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# Targeted Study Sessions(Week)"
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="@dimen/text_size"
+                android:paddingRight="3dp"
+                android:layout_below="@+id/attendanceRate"
+                android:id="@+id/targetSessions" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_span="3"
+                android:inputType="numberDecimal" android:layout_weight="1"
+                android:textSize="@dimen/text_size"
+                android:background="#ccc"
+                android:id="@+id/targetSessionsView" />
+        </TableRow>
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Study Sessions(Week)"
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/attendanceRate"
+                android:id="@+id/targetWeekSessions" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_span="3"
+                android:inputType="numberDecimal" android:layout_weight="1"
+                android:textSize="@dimen/text_size"
+
+                android:layout_marginTop="5dp"
+
+                android:background="#ccc"
+                android:id="@+id/targetWeekSessionsView" />
+        </TableRow>
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Study Sessions(Term)"
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="@dimen/text_size"
+
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/attendanceRate"
+                android:id="@+id/targetTermSessions" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_span="3"
+                android:inputType="numberDecimal" android:layout_weight="1"
+                android:textSize="@dimen/text_size"
+
+                android:layout_marginTop="5dp"
+
+                android:background="#ccc"
+                android:id="@+id/targetTermSessionsView" />
+        </TableRow>
+    </TableLayout>
+
+
+
+ </RelativeLayout>
+

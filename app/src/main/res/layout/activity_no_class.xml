@@ -1,0 +1,33 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_height="fill_parent" android:layout_width="fill_parent"
+        tools:context="com.teamtreehouse.oslist.NoClassActivity"
+
+        android:id="@+id/classTagView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to add new class"
+            android:gravity="left"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
+
+            android:textSize="25dp"
+            android:textColor="#58857e"
+            android:textStyle="bold"
+            android:id="@+id/NoClassLabel" />
+
+        <ImageView
+            android:id="@+id/arrowImage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/uparrow"
+
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/NoClassLabel"
+            android:layout_toEndOf="@+id/NoClassLabel" />
+
+
+</RelativeLayout>

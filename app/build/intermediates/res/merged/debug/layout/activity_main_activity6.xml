@@ -1,0 +1,61 @@
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="2dp"
+    tools:context="com.teamtreehouse.oslist.MainActivity6">
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:id="@+id/horizontalLine1"
+        android:layout_below="@+id/calendarView2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Study Sessions Completed Today"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/studySessionsLabel"
+        android:layout_below="@+id/calendarView2"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:id="@+id/horizontalLine2"
+        android:layout_below="@+id/studySessionsLabel"/>
+
+    <TableLayout android:id="@+id/tableLayout" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:padding="2dp"
+        android:stretchColumns="*"
+        android:layout_below="@+id/horizontalLine2">
+
+
+        <TableRow android:id="@+id/tableRow3"
+            android:background="#fff"
+            android:layout_height="500dp"
+            android:layout_width="500dp" android:layout_weight="1">
+
+            <ScrollView android:id="@+id/queryScrollView"
+                android:layout_width="match_parent"
+                android:layout_span="2" >
+                <TableLayout android:id="@+id/queryTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:padding="5dp"
+                    android:stretchColumns="*">
+                </TableLayout>
+            </ScrollView>
+        </TableRow>
+
+
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" android:id="@+id/relativelayout1"
+    tools:context="com.teamtreehouse.oslist.StudySessionsGuideLines">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1) ONE STUDY SESSION EQUATES TO 50 MINUTES OF STUDYING."
+            android:textColor="#000"
+            android:textSize="@dimen/text_size"
+            android:padding="2dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:id="@+id/guideLine1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) SUGGESTED GUIDELINES: UNDER A TRADITIONAL 15 WEEK TERM, YOU SHOULD PLAN ON SIX 50 MINUTE STUDY SESSIONS PER CLASS PER WEEK."
+            android:textColor="#000"
+            android:textSize="@dimen/text_size"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:id="@+id/guideLine2"
+            android:layout_below="@+id/guideLine1"/>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/activity_study_sessions_guide_lines.xml -->

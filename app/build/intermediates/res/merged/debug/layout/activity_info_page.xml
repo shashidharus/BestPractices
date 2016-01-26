@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding = "10dp"
+    tools:context="com.teamtreehouse.oslist.InfoPage">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Best Practices To Graduate empowers college students to attend classes and complete study sessions through five best practices so they can graduate."
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:padding="2dp"
+        android:layout_marginTop="15dp"
+
+        android:textStyle="bold"
+        android:id="@+id/info1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:text="http://bestpracticestograduate.org/"
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:id="@+id/websiteLink1"
+        android:layout_below="@id/info1"
+        android:autoLink="web"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="This Key Outcomes Tracker Tool provides immediate feedback on attending classes and completing study sessions. By entering your basic course information and simply checking off your attendance and study progress on a daily basis, you will develop a living document that shows your likelihood of successfully graduating from college."
+        android:textColor="#000"
+
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:id="@+id/info2"
+        android:layout_below="@id/websiteLink1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+&#8226;   The Key Outcomes Tracker provides a running summary of your attendance in each class as your semester progresses. Less than 75% attendance indicates a high risk of jeopardizing a passing grade."
+
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+
+        android:layout_marginTop="30dp"
+        android:id="@+id/info3"
+        android:layout_below="@id/info2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+&#8226;    This tool will also help you track your completion of planned 'weekly' study sessions. Completing less than 80% of your study sessions places you at risk in not earning course credit."
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+
+        android:textStyle="bold"
+        android:gravity="fill_horizontal"
+        android:layout_marginTop="30dp"
+        android:id="@+id/info4"
+        android:layout_below="@id/info3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="As your semester progresses, this tracking tool can provide you a reality check on your true progress before it's too late to make a positive change."
+        android:textColor="#000"
+        android:textSize="@dimen/text_size"
+        android:paddingRight="10dp"
+
+        android:textStyle="bold"
+        android:gravity="fill_horizontal"
+        android:layout_marginTop="30dp"
+        android:id="@+id/info5"
+        android:layout_below="@id/info4"/>
+
+
+</RelativeLayout>
+</ScrollView>

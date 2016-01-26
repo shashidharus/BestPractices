@@ -1,0 +1,372 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent"
+        tools:context="com.teamtreehouse.oslist.MainActivity3"
+        android:padding = "5dp"
+        android:id="@+id/new_tag_view"
+        >
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/blank" />
+        <Button
+            android:id="@+id/delete"
+            android:text="Delete"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons"
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/blank"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Class Name:        "
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/classNameText"
+            android:layout_below="@id/blank"
+            android:layout_toLeftOf="@+id/courseNumberEdit"
+            android:layout_alignBottom="@+id/classNameEdit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Enter class Name"
+            android:textSize="@dimen/text_size1"
+
+            android:textColor="#000"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/classNameEdit"
+            android:layout_below="@+id/blank"
+            android:layout_toRightOf="@+id/classNameText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Course ID:          "
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:id="@+id/courseIDText"
+            android:layout_toLeftOf="@+id/instructorEdit"
+            android:layout_alignTop="@+id/courseNumberEdit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Course ID"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size1"
+
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/courseNumberEdit"
+            android:layout_below="@+id/classNameEdit"
+            android:layout_toRightOf="@id/courseIDText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Instructor:                  "
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="15dp"
+            android:id="@+id/instructorText"
+            android:layout_below="@+id/courseNumberEdit"
+
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Instructor Name"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+
+            android:paddingRight="10dp"
+            android:layout_below="@+id/courseNumberEdit"
+            android:layout_toRightOf="@+id/instructorText"
+            android:id="@+id/instructorEdit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teaching Assistant: "
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="13dp"
+            android:id="@+id/teachingAssistantText"
+            android:layout_below="@id/instructorEdit"
+            android:layout_marginTop="10dp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teaching Assistant Name"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size1"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/teachingAssistantEdit"
+            android:layout_below="@+id/instructorEdit"
+            android:layout_toRightOf="@+id/teachingAssistantText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Semester Start Date:"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/semesterStartText"
+            android:layout_below="@id/teachingAssistantEdit"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mm/dd/yyyy"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size1"
+            android:gravity="left"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:paddingRight="10dp"
+            android:id="@+id/semesterStartEdit"
+            android:layout_below="@+id/teachingAssistantEdit"
+            android:layout_toRightOf="@+id/semesterStartText"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Semester End Date:"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="15dp"
+
+            android:layout_marginTop="15dp"
+            android:id="@+id/semesterEndText"
+            android:layout_below="@id/semesterStartText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mm/dd/yyyy"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size1"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/semesterEndEdit"
+            android:layout_below="@+id/semesterStartText"
+            android:layout_toRightOf="@id/semesterEndText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Select Class Days:"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/selectclassDaysLabel"
+            android:layout_below="@id/semesterEndText" />
+
+
+        <Button
+            android:id="@+id/monday1"
+            android:text="Mon"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/semesterEndText"
+            />
+        <Button
+            android:id="@+id/tuesday1"
+            android:text="Tue"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_toRightOf="@+id/monday1"
+            android:layout_below="@+id/semesterEndText" />
+
+        <Button
+            android:id="@+id/wednesday1"
+            android:text="Wed"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_toRightOf="@+id/tuesday1"
+            android:layout_below="@+id/semesterEndText"
+            />
+
+        <Button
+            android:id="@+id/thursday1"
+            android:text="Thu"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_toRightOf="@+id/wednesday1"
+            android:layout_below="@+id/semesterEndText"
+            ></Button>
+        <Button
+            android:id="@+id/friday1"
+            android:text="Fri"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_toRightOf="@+id/thursday1"
+            android:layout_below="@+id/semesterEndText"
+            />
+        <Button
+            android:id="@+id/saturday1"
+            android:text="Sat"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_toRightOf="@+id/friday1"
+            android:layout_below="@+id/semesterEndText"
+            ></Button>
+        <Button
+            android:id="@+id/sunday1"
+            android:text="Sun"
+            android:layout_toRightOf="@+id/saturday1"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
+            android:layout_below="@+id/semesterEndText"
+            ></Button>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/monday1"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/timeDisplayTableLayout"
+            >
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Targeted Weekly Study Sessions"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/timeDisplayTableLayout"
+            android:id="@+id/targetSessionsText" />
+
+        <EditText android:layout_width="wrap_content"
+            android:id="@+id/targetSessionsEdit"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+
+            android:textSize="@dimen/text_size1"
+            android:hint="0"
+
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/timeDisplayTableLayout"
+            android:layout_toRightOf="@+id/targetSessionsText"
+            android:layout_toStartOf="@id/saturday1"
+            android:layout_toLeftOf="@id/saturday1"
+            android:layout_alignRight="@+id/blank"
+            android:layout_alignEnd="@+id/blank" />
+
+        <ImageButton
+            android:id="@+id/help"
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/question_mark"
+            android:background="#00FFFFFF"
+
+            android:layout_below="@+id/timeDisplayTableLayout"
+            android:layout_toRightOf="@+id/saturday1"
+            android:layout_toEndOf="@+id/saturday1" />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class Location"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:id="@+id/classLocation"
+            android:layout_below="@id/help" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textColor="#000"
+            android:gravity="left"
+            android:textSize="@dimen/text_size1"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:layout_below="@id/classLocation"
+            android:id="@+id/classDescription" />
+
+
+
+        <Button
+            android:id="@+id/save"
+            android:text="Save"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons"
+            android:layout_height="35dp"
+            android:layout_width="60dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@id/classDescription"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

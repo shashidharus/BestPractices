@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dp"
+    android:stretchColumns="*" android:background="@android:color/white">
+ <!--   <TableRow android:id="@+id/tableRow0"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    </TableRow>-->
+
+    <TableRow android:id="@+id/tableRow3"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:layout_weight="1">
+
+        <ScrollView android:id="@+id/queryScrollView"
+            android:layout_width="match_parent"
+            android:layout_span="2" android:padding="5dp">
+            <TableLayout android:id="@+id/queryTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:padding="5dp"
+                android:stretchColumns="*">
+            </TableLayout>
+
+        </ScrollView>
+    </TableRow>
+
+
+</TableLayout><!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/activity_main_activity1.xml -->

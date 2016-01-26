@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newTagTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <TextView android:id="@+id/newTagButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size1"
+        android:textColor="#000"
+        android:textStyle="bold"
+        ></TextView>
+    <EditText android:id="@+id/newStartTime"
+        android:layout_width="wrap_content"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:layout_height="wrap_content"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:textSize="@dimen/text_size1"
+        android:hint="Start Time"></EditText>
+    <EditText android:id="@+id/newEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:textSize="@dimen/text_size1"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:hint="End Time"></EditText>
+    <Button android:id="@+id/newDeleteButton"
+        android:width="3dp"
+        android:height="3dp"
+        android:textSize="@dimen/activity_vertical_margin"
+
+        android:text="X"></Button>
+
+</TableRow><!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/time_layout_edit.xml -->

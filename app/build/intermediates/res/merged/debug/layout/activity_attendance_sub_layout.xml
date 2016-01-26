@@ -1,0 +1,284 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    tools:context="com.teamtreehouse.oslist.AttendanceSubLayout">
+
+    <Button
+        android:id="@+id/edit1"
+        android:text="Edit"
+
+        android:background="@drawable/mybuttons"
+        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+
+        android:layout_alignParentRight="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout1"
+        android:layout_below="@id/edit1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Name: "
+            android:textColor="#000"
+            android:padding="2dp"
+
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@+id/classNameLabel"
+            android:layout_below="@+id/attendanceLabel"
+            android:layout_marginRight="9dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#ccc"
+            android:textColor="#000"
+            android:padding="2dp"
+            android:id="@+id/className"
+            android:layout_toRightOf="@id/classNameLabel"
+            android:layout_below="@+id/attendanceLabel"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout2"
+        android:layout_below="@+id/relativelayout1">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Course #:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/courseNumberLabel"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#ccc"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:paddingRight="10dp"
+            android:id="@+id/courseNumber"
+            android:layout_toRightOf="@id/courseNumberLabel"
+            android:layout_marginBottom="2dp" />
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout3"
+        android:layout_below="@+id/relativelayout2">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Time:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/timeLabel"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:background="#ccc"
+           android:textColor="#000"
+           android:textSize="15dp"
+           android:paddingRight="10dp"
+           android:id="@+id/time"
+           android:layout_toRightOf="@id/timeLabel"
+           android:layout_marginBottom="2dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout4"
+        android:layout_below="@+id/relativelayout3">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Instructor:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/instructorLabel"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#ccc"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:paddingRight="10dp"
+            android:id="@+id/instructor"
+            android:layout_toRightOf="@id/instructorLabel"
+            android:layout_marginBottom="2dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout5"
+        android:layout_below="@+id/relativelayout4">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="TA:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/taLabel"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:paddingRight="10dp"
+            android:id="@+id/ta"
+            android:layout_toRightOf="@id/taLabel"
+            android:layout_marginBottom="2dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout6"
+        android:layout_below="@+id/relativelayout5">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Location:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:id="@+id/locationLabel"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#ccc"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:paddingRight="10dp"
+            android:id="@+id/location"
+            android:layout_toRightOf="@id/locationLabel"/>
+    </RelativeLayout>
+
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark If Attended Today's Class"
+        android:textSize="@dimen/text_size1"
+        android:id="@+id/attendedCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativelayout6"
+        android:layout_alignParentLeft="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark If Class Cancelled or Holiday"
+        android:textSize="@dimen/text_size1"
+        android:id="@+id/cancelledCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/attendedCheckBox"
+        android:layout_alignParentLeft="true"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_below="@+id/cancelledCheckBox"
+        android:id="@+id/tableLayout"
+        android:padding="5dp" android:stretchColumns="1"
+        android:textAlignment="center">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tableRow10">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attendance Rate(Weekly)"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                android:id="@+id/wtdRate"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="18dp"
+                android:paddingRight="10dp"
+                android:background="#ccc"
+                android:id="@+id/wtdText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/tableRow11">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attendance Rate till today(Term)"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:paddingRight="10dp"
+                android:id="@+id/ttdRate"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="18dp"
+                android:paddingRight="10dp"
+                android:background="#ccc"
+                android:id="@+id/ttdText" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

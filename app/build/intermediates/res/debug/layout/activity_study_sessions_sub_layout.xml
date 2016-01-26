@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+
+    tools:context="com.teamtreehouse.oslist.StudySessionsSubLayout">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:stretchColumns="*"
+        android:padding="5dp"
+        android:id="@+id/relativelayout1"
+
+        android:layout_below="@+id/horizontalLine2">
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginBottom="5dp"
+           android:textSize="0dp"
+           android:id="@+id/blank3"
+            />
+
+        <Button
+            android:id="@+id/editSessions"
+            android:text="Edit"
+              android:background="@drawable/mybuttons"
+            android:layout_height="20dp"
+            android:layout_width="80dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/text_size"
+
+            />
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Name:"
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:padding="2dp"
+
+            android:textStyle="bold"
+            android:id="@+id/classNameLabel"
+            android:ellipsize="end"
+            android:layout_below="@+id/editSessions"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:background="#ccc"
+            android:padding="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/className"
+           />
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course #:"
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:padding="2dp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@+id/courseNumberLabel"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:background="#ccc"
+            android:textSize="13dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/courseNumber"
+            />
+        </TableRow>
+        <TableRow >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# of Targeted Weekly Study Sessions"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:paddingRight="10dp"
+                android:id="@+id/targetSessions" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="13dp"
+
+                android:background="#ccc"
+                android:id="@+id/txtTargetSessions"
+                android:layout_marginTop="2dp" />
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:text="Enter # of Study Sessions Completed Today and Save"
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:id="@+id/completedSessions" />
+
+<LinearLayout>
+        <EditText
+            android:id="@+id/txtCompletedSessions"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+
+            android:textSize="13dp"
+            android:inputType="number">
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/help"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:src="@drawable/question_mark"
+            android:background="#00FFFFFF"
+            />
+</LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+
+    <!-- <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Class Name"
+         android:textColor="#000"
+         android:textSize="13dp"
+         android:gravity="left"
+         android:paddingRight="0dp"
+         android:layout_marginTop="10dp"
+         android:id="@+id/className"
+         android:layout_below="@+id/horizontalLine2"/>
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Course Number"
+         android:textColor="#000"
+         android:textSize="13dp"
+         android:gravity="left"
+         android:paddingRight="10dp"
+         android:id="@+id/courseNumber"
+         android:layout_below="@+id/className"/>-->
+
+    <TableLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+
+        android:id="@+id/tableLayout3"
+        android:padding="5dp" android:stretchColumns="1"
+        android:layout_below="@id/save"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tableRow2" android:layout_weight="4">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Completed Study Sessions(Weekly)"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:paddingRight="10dp"
+                android:id="@+id/wtdSessionsRate" android:layout_weight="3"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#000"
+                android:gravity="right"
+                android:textSize="13dp"
+                android:paddingRight="10dp"
+                android:background="#ccc"
+                android:id="@+id/txtWTDSessions" android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tableRow3" android:layout_weight="4">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Completed Study Sessions(Term)"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:paddingRight="10dp"
+                android:id="@+id/ttdSessionsRate" android:layout_weight="3"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#000"
+                android:gravity="right"
+                android:textSize="13dp"
+                android:paddingRight="10dp"
+                android:background="#ccc"
+                android:id="@+id/txtTTD" android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/save"
+        android:text="Save"
+
+        android:background="@drawable/mybuttons"
+        android:layout_height="30dp"
+        android:layout_width="50dp"
+
+        android:textSize="13dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/relativelayout1"
+        android:layout_centerHorizontal="true" />
+    <!--<Button
+        android:id="@+id/save"
+        android:text="Save"
+        style="@style/buttonsWeek"
+        android:background="@drawable/mybuttons"
+        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_weight="1"
+        android:textSize="18dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true" />-->
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Peeyush/AndroidStudioProjects/BestPractices/app/src/main/res/layout/activity_study_sessions_sub_layout.xml -->
