@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
     Button buttonClass;
     Button buttonTrackOutcome;
     Button PDFViewer;
-
+    static int backButtonCount = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,10 +91,10 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
         super.onDestroy();
     }
 
-   /* @Override
+    /*@Override
     public void onBackPressed()
     {
-        int backButtonCount = 0;
+
         if(backButtonCount >= 1)
         {
             //Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -107,9 +107,9 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
             Toast.makeText(this, "Press the back button once again to close the application.", Toast.LENGTH_SHORT).show();
             backButtonCount++;
         }
-    }
+    }*/
 
-    */
+
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 

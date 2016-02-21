@@ -214,11 +214,19 @@
 
 
         <Button
-            android:id="@+id/monday1"
-            android:text="Mon"
+            android:id="@+id/sunday1"
+            android:text="Sun"
             style="@style/buttonsWeek"
             android:background="@drawable/mybuttons1"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/semesterEndText"
+            ></Button>
+        <Button
+            android:id="@+id/monday1"
+            android:text="Mon"
+            android:layout_toRightOf="@+id/sunday1"
+            style="@style/buttonsWeek"
+            android:background="@drawable/mybuttons1"
             android:layout_below="@+id/semesterEndText"
             />
         <Button
@@ -262,14 +270,7 @@
             android:layout_toRightOf="@+id/friday1"
             android:layout_below="@+id/semesterEndText"
             ></Button>
-        <Button
-            android:id="@+id/sunday1"
-            android:text="Sun"
-            android:layout_toRightOf="@+id/saturday1"
-            style="@style/buttonsWeek"
-            android:background="@drawable/mybuttons1"
-            android:layout_below="@+id/semesterEndText"
-            ></Button>
+
 
 
 
