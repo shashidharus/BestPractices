@@ -1,12 +1,13 @@
 package com.teamtreehouse.oslist;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class AttendanceSubLayout extends ActionBarActivity {
+public class AttendanceSubLayout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class AttendanceSubLayout extends ActionBarActivity {
         return true;
     }
 */
+    public void editAttendance(View v){
+        Intent i = new Intent(AttendanceSubLayout.this,MainActivity3.class);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

@@ -9,18 +9,47 @@
     <string name="title_activity_main_activity2">Class and Study Sessions</string>
     <string name="title_activity_main_activity1">Best Practices</string>
     <string name="errorButton">OK</string>
+    <string name="deleteYesButton">YES</string>
+    <string name="deleteNoButton">No</string>
     <string name="errorTitle">Enter Mandatory Fields</string>
-    <string name="errorMessage">Mandatory Fieldss are marked as *</string>
+    <string name="deleteConfirm">Delete Confirmation</string>
+    <string name="errorMessage">Mandatory Fields are marked as *</string>
+    <string name="deleteMessage">Are you sure to delete this field?</string>
     <string name="title_activity_main_activity3">Classes and Study Sessions</string>
     <string name="title_activity_main_activity4">Track OutComes</string>
     <string name="title_activity_main_activity5">Track Class Attendance</string>
     <string name="title_activity_main_activity6">Track Study Sessions</string>
     <string name="title_activity_main_activity0">MainActivity0</string>
     <string name="help">Help</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="instructor_profile">Instructor Profile</string>
     <string name="title_activity_attendance_sub_layout">AttendanceSubLayout</string>
     <string name="title_activity_study_sessions_sub_layout">StudySessionsSubLayout</string>
     <string name="title_activity_study_sessions_guide_lines">StudySessionsGuideLines</string>
     <string name="title_activity_info_page">Info </string>
     <string name="title_activity_about_us_page">About Us</string>
+    <string name="type_prompt">Select Type</string>
+    <string-array name="type_array">
+        <item>Select</item>
+        <item>Test</item>
+        <item>Quiz</item>
+        <item>Assignment</item>
+        <item>Paper</item>
+        <item>Project</item>
+        <item>Lab</item>
+        <item>Lesson</item>
+        <item>Mid-Term</item>
+        <item>Final</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="drawer_list">
+        <item>Instructor Profile</item>
+        <item>Classes and Study Sessions</item>
+        <item>Class Activities</item>
+        <item>Key Outcomes</item>
+        <item>Student Profile</item>
+        <item>PDF on Succeeding in College</item>
+        <item>About Us</item>
+    </string-array>
 
 </resources>

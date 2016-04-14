@@ -4,34 +4,29 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 
-public class MainActivity extends ActionBarActivity implements  OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private ListView mDrawerList;
-    private DrawerLayout mDrawerLayout;
+    protected DrawerLayout mDrawerLayout;
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
@@ -39,45 +34,105 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
     Button buttonTrackOutcome;
     Button PDFViewer;
     static int backButtonCount = 0;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        buttonClass = (Button)findViewById(R.id.classes);
+    AppCompatActivity appCompatActivity;
+
+    protected void onCreateDrawer() {
+        //setContentView(R.layout.activity_class_activities);
+        /*buttonClass = (Button)findViewById(iewById(R.id.outcomes);
+        buttonTrackOutcome.setOnClickLisR.id.classes);
         buttonClass.setOnClickListener(this);
-        buttonTrackOutcome = (Button)findViewById(R.id.outcomes);
-        buttonTrackOutcome.setOnClickListener(this);
+        buttonTrackOutcome = (Button)findVtener(this);
         PDFViewer = (Button) findViewById(R.id.activities);
-        PDFViewer.setOnClickListener(this);
+        PDFViewer.setOnClickListener(this);*/
 
         mDrawerList = (ListView)findViewById(R.id.navList);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawerActivity);
         mActivityTitle = "Key Outcomes Tracker";
         getSupportActionBar().setTitle(mActivityTitle);
-
         addDrawerItems();
         setupDrawer();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
  }
+    /*@Override
+    public void setContentView(@LayoutRes int layoutResID){
+        super.setContentView(layoutResID);
+        addDrawerItems();
+        setupDrawer();
 
-    private void addDrawerItems() {
-        String[] osArray = { "Info", "About Us" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-        mDrawerList.setAdapter(mAdapter);
+    }*/
 
+    protected void addDrawerItems() {
+        /*final TypedArray typedArray = getResources().obtainTypedArray(R.array.sections_icons);
+        mDrawerList.setAdapter(new ArrayAdapter<String>(
+                getActionBar().getThemedContext(),
+                android.R.layout.simple_list_item_activated_1,
+                android.R.id.text1,
+                getResources().getStringArray(R.array.drawer_list)
+        ) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+                int resourceId = typedArray.getResourceId(position, 0);
+                Drawable drawable = getResources().getDrawable(resourceId);
+                ((TextView) v).setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
+                return v;
+            }
+        });*/
+        DrawerItem drawerItem[] = new DrawerItem[]{
+                new DrawerItem(R.drawable.icc_instructor,"Instructor Profile"),
+                new DrawerItem(R.drawable.icc_study,"Classes and Study Sessions"),
+                new DrawerItem(R.drawable.icc_tasks,"Class Activities"),
+                new DrawerItem(R.drawable.icc_calendar,"Track Key Outcomes"),
+                new DrawerItem(R.drawable.icc_student,"Student Profile"),
+                new DrawerItem(R.drawable.icc_pdf,"Succeed in College"),
+                new DrawerItem(R.drawable.icc_info,"About Us")
+
+        };
+        DrawerAdapter drawerAdapter = new DrawerAdapter(this,R.layout.list_view_row,drawerItem);
+        /*String[] osArray = { "Instructor Profile","Classes and Study Sessions","Class Activities", "Key Outcomes","Student Profile","Info", "About Us", "Succeed in College" };
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);*/
+        mDrawerList.setAdapter(drawerAdapter);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 System.out.println(position);
-                switch (position){
+                mDrawerLayout.closeDrawers();
+                switch (position) {
                     case 0:
-                        startActivity(new Intent("com.teamtreehouse.oslist.InfoPage"));
+                        Intent intent0 = new Intent(getApplicationContext(),InstructorProfile.class);
+                        //intent0.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent0);
                         break;
                     case 1:
-                        startActivity(new Intent("com.teamtreehouse.oslist.AboutUsPage"));
+                        Intent intent1 = new Intent(getApplicationContext(),MainActivity1.class);
+                        //intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent1);
                         break;
+                    case 2:
+                        Intent intent2 = new Intent(getApplicationContext(),ClassActivity.class);
+                        //intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(getApplicationContext(),MainActivity4.class);
+                        //intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(getApplicationContext(),StudentProfile.class);
+                        //intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent4);
+                        break;
+                    case 5:
+                        viewPDFMethod();
+                        break;
+                    case 6:
+                        Intent intent5 = new Intent(getApplicationContext(),InfoPage.class);
+                        //intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent5);
+                        break;
+
 
                 }
 
@@ -97,10 +152,7 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
 
         if(backButtonCount >= 1)
         {
-            //Intent intent = new Intent(Intent.ACTION_MAIN);
-            //intent.addCategory(Intent.CATEGORY_HOME);
-            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            finish();
+            MainActivity.this.finish();
         }
         else
         {
@@ -110,7 +162,7 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
     }*/
 
 
-    private void setupDrawer() {
+    protected void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
             /** Called when a drawer has settled in a completely open state. */
@@ -139,11 +191,17 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
         mDrawerToggle.syncState();
     }
 
+    /*@Override
+    protected void onResume(){
+        super.onResume();
+        mDrawerLayout.closeDrawer(mDrawerList);
+    }*/
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
+
 
     @Override
    public boolean onOptionsItemSelected(MenuItem item) {
@@ -165,25 +223,6 @@ public class MainActivity extends ActionBarActivity implements  OnClickListener{
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.classes:
-                classesViewMethod();
-                break;
-
-
-            case R.id.outcomes:
-                trackOutcomesViewMethod();
-                break;
-
-            case R.id.activities:
-
-                viewPDFMethod();
-                break;
-        }
-    }
 
 
     private void copyFile(InputStream in, OutputStream out) throws IOException {

@@ -5,12 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.text.format.Time;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -25,11 +22,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 
-public class MainActivity6 extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity6 extends MainActivity implements View.OnClickListener{
 
     Bundle extras;
     CalendarView calendar;
@@ -50,11 +46,18 @@ public class MainActivity6 extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity6);
+        super.onCreateDrawer();
+        getSupportActionBar().setTitle("Study Session Tracking");
         populateHashMap();
         //initializes the calendarview
         initializeCalendar();
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        NavUtils.navigateUpFromSameTask(this);
+    }
 
     @Override
     protected void onResume()
@@ -143,16 +146,16 @@ public class MainActivity6 extends ActionBarActivity implements View.OnClickList
         calendar.setFirstDayOfWeek(1);
 
         //The background color for the selected week.
-        calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
+        //calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
 
         //sets the color for the dates of an unfocused month.
-        calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.grey));
+        //calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.grey));
 
         //sets the color for the separator line between weeks.
        // calendar.setWeekSeparatorLineColor(getResources().getColor(R.color.transparent));
 
         //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
-        calendar.setSelectedDateVerticalBar(R.color.darkgreen);
+        //calendar.setSelectedDateVerticalBar(R.color.darkgreen);
 
         extras = getIntent().getExtras(); // get Bundle of extras
         String courseIDValue = null;
@@ -351,7 +354,17 @@ public class MainActivity6 extends ActionBarActivity implements View.OnClickList
             queryTableLayout.removeAllViews();
         }
     }
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        if (requestCode == 20) {
+
+            if(resultCode == RESULT_OK){
+                queryTableLayout.removeAllViews();
+                populateSelectedDateData();
+            }
+        }
+    }*/
 
     public View.OnClickListener editButtonListener = new View.OnClickListener()
     {
@@ -361,7 +374,7 @@ public class MainActivity6 extends ActionBarActivity implements View.OnClickList
 
             Intent addNewClass =
                     new Intent(MainActivity6.this, MainActivity3.class);
-            RelativeLayout buttonTableRow = (RelativeLayout) v.getParent().getParent().getParent();
+            RelativeLayout buttonTableRow = (RelativeLayout) v.getParent();
             TextView getCourseID = (TextView) buttonTableRow.findViewById(R.id.courseNumber);
             String courseIDString = getCourseID.getText().toString();
             //System.out.println(getCourseID.getText().toString());
@@ -372,7 +385,7 @@ public class MainActivity6 extends ActionBarActivity implements View.OnClickList
 
 //Add your data to bundle
             bundle.putString("CourseIDString", courseIDString);
-
+            bundle.putInt("ActivityInt", ActivityConstants.MainActivity6);
             addNewClass.putExtras(bundle);
             startActivity(addNewClass); // start the AddEditContact Activity
 

@@ -5,6 +5,15 @@
 
     tools:context="com.teamtreehouse.oslist.StudySessionsSubLayout">
 
+    <Button
+        android:id="@+id/editSessions"
+        style="?android:attr/buttonStyleSmall"
+        android:background="@drawable/icon_document_edit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,28 +21,10 @@
         android:padding="5dp"
         android:id="@+id/relativelayout1"
 
-        android:layout_below="@+id/horizontalLine2">
-        <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_marginBottom="5dp"
-           android:textSize="0dp"
-           android:id="@+id/blank3"
-            />
+        android:layout_below="@+id/editSessions"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <Button
-            android:id="@+id/editSessions"
-            android:text="Edit"
-              android:background="@drawable/mybuttons"
-            android:layout_height="20dp"
-            android:layout_width="80dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="@dimen/text_size"
-
-            />
-        </TableRow>
         <TableRow>
         <TextView
             android:layout_width="wrap_content"
@@ -170,9 +161,10 @@
 
         android:id="@+id/tableLayout3"
         android:padding="5dp" android:stretchColumns="1"
-        android:layout_below="@id/save"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/save"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <TableRow
@@ -236,13 +228,10 @@
 
     <Button
         android:id="@+id/save"
-        android:text="Save"
-
-        android:background="@drawable/mybuttons"
-        android:layout_height="30dp"
-        android:layout_width="50dp"
-
-        android:textSize="13dp"
+        android:background="@drawable/ic_save"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="?android:attr/buttonStyleSmall"
         android:paddingLeft="5dp"
         android:layout_below="@+id/relativelayout1"
         android:layout_centerHorizontal="true" />

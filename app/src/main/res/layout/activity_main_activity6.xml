@@ -1,61 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:padding="2dp"
-    tools:context="com.teamtreehouse.oslist.MainActivity6">
-
-    <CalendarView
-        android:id="@+id/calendarView2"
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawerActivity"
         android:layout_width="match_parent"
-        android:layout_height="220dp" />
+        android:layout_height="match_parent">
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:background="#000000"
-        android:id="@+id/horizontalLine1"
-        android:layout_below="@+id/calendarView2"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Study Sessions Completed Today"
-        android:textColor="#000"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:padding="10dp"
-        android:id="@+id/studySessionsLabel"
-        android:layout_below="@+id/calendarView2"/>
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.teamtreehouse.oslist.MainActivity6">
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#000000"
-        android:id="@+id/horizontalLine2"
-        android:layout_below="@+id/studySessionsLabel"/>
-
-    <TableLayout android:id="@+id/tableLayout" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:padding="2dp"
-        android:stretchColumns="*"
-        android:layout_below="@+id/horizontalLine2">
-
-
-        <TableRow android:id="@+id/tableRow3"
-            android:background="#fff"
-            android:layout_height="500dp"
-            android:layout_width="500dp" android:layout_weight="1">
-
-            <ScrollView android:id="@+id/queryScrollView"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_span="2" >
-                <TableLayout android:id="@+id/queryTableLayout"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+                <CalendarView
+                    android:id="@+id/calendarView2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:padding="5dp"
+                    android:layout_height="220dp"
+                    android:selectedWeekBackgroundColor="@color/green"
+                    android:unfocusedMonthDateColor="@color/grey"
+                    android:selectedDateVerticalBar="@color/darkgreen"/>
+
+                <View
+                    android:id="@+id/horizontalLine1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/calendarView2"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/studySessionsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/calendarView2"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Study Sessions Completed Today"
+                    android:textColor="#000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/horizontalLine2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/studySessionsLabel"
+                    android:background="#000000" />
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/horizontalLine2"
+                    android:padding="2dp"
                     android:stretchColumns="*">
+
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="500dp"
+                        android:layout_height="500dp"
+                        android:layout_weight="1"
+                        android:background="#fff">
+
+                        <ScrollView
+                            android:id="@+id/queryScrollView"
+                            android:layout_width="match_parent"
+                            android:layout_span="2">
+
+                            <TableLayout
+                                android:id="@+id/queryTableLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:stretchColumns="*"></TableLayout>
+                        </ScrollView>
+                    </TableRow>
+
+
                 </TableLayout>
-            </ScrollView>
-        </TableRow>
+            </RelativeLayout>
+        </ScrollView>
 
-
-    </TableLayout>
-</RelativeLayout>
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#ffeeeeee"
+            android:choiceMode="singleChoice" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

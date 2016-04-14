@@ -4,23 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
+import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class MainActivity5 extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity5 extends MainActivity implements View.OnClickListener{
 
     Bundle extras;
     CalendarView calendar;
@@ -57,17 +50,22 @@ public class MainActivity5 extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity5);
-
+        super.onCreateDrawer();
+        getSupportActionBar().setTitle("Attendance Tracking");
         final Calendar c = Calendar.getInstance();
         dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
         //System.out.println("Calendar" + " This " + dayOfWeek);
-
         populateHashMap();
         initializeCalendar();//initializes the calendarview
 
 
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        NavUtils.navigateUpFromSameTask(this);
+    }
 
     @Override
     protected void onResume()
@@ -89,13 +87,13 @@ public class MainActivity5 extends ActionBarActivity implements View.OnClickList
         calendar.setFirstDayOfWeek(1);
 
         //The background color for the selected week.
-        calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
+        //calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
 
         //sets the color for the dates of an unfocused month.
-        calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.grey));
+        //calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.grey));
 
         //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
-        calendar.setSelectedDateVerticalBar(R.color.darkgreen);
+        //calendar.setSelectedDateVerticalBar(R.color.darkgreen);
 
         extras = getIntent().getExtras(); // get Bundle of extras
         String courseIDValue = null;
@@ -419,7 +417,7 @@ public class MainActivity5 extends ActionBarActivity implements View.OnClickList
 
 //Add your data to bundle
             bundle.putString("CourseIDString", courseIDString);
-
+            bundle.putInt("ActivityInt", ActivityConstants.MainActivity5);
             addNewClass.putExtras(bundle);
             startActivity(addNewClass); // start the AddEditContact Activity
 
@@ -430,6 +428,16 @@ public class MainActivity5 extends ActionBarActivity implements View.OnClickList
             //queryEditText.setText(savedSearches.getString(tag, ""));
         } // end method onClick
     }; // end OnClickListener anonymous inner class
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 15) {
+            if(resultCode == RESULT_OK){
+                queryTableLayout.removeAllViews();
+                populateSelectedDateData();
+            }
+        }
+    }*/
 
     private double calculateWeeklyAttendance(String courseID)
     {

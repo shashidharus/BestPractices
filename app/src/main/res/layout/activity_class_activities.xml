@@ -1,0 +1,232 @@
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            tools:context="com.teamtreehouse.oslist.ClassActivity">
+
+            <TextView
+                android:id="@+id/activityIdHiddenView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/classNameActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size"
+                android:layout_below="@+id/editClassActivity"
+                android:layout_alignRight="@+id/deleteActivity"
+                android:layout_alignEnd="@+id/deleteActivity" />
+
+            <TextView
+                android:id="@+id/courseNumberActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/classNameActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/typeActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/courseNumberActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/nameActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/typeActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/dueDateActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/nameActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/descriptionActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/dueDateActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/maxGradeActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/descriptionActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/enterGradeActivity"
+                android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/classNameActivity"
+                android:layout_below="@id/maxGradeActivity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ccc"
+                android:textColor="#000"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/editClassActivity"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_document_edit"
+                android:onClick="editListener"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/deleteActivity" />
+
+            <Button
+                android:id="@+id/deleteActivity"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_document_delete"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="deleteActivities"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Class Name :"
+                android:id="@+id/classNameDisplay"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/classNameActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/courseNumberActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Course ID :"
+                android:id="@+id/courseIDDisplay"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/courseNumberActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/courseNumberActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Activity Type :"
+                android:id="@+id/courseTypeDisplay"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/typeActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/nameActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Activity Name :"
+                android:textStyle="bold"
+                android:id="@+id/activityNameDisplay"
+                android:layout_alignTop="@+id/nameActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/dueDateActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Due Date :"
+                android:textStyle="bold"
+                android:id="@+id/dueDateDisplay"
+                android:layout_alignTop="@+id/dueDateActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/descriptionActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Description :"
+                android:textStyle="bold"
+                android:id="@+id/descDisplay"
+                android:layout_alignTop="@+id/descriptionActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/maxGradeActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Maximum Grade :"
+                android:id="@+id/maxGradeDisplay"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/maxGradeActivity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/maxGradeActivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Grade :"
+                android:id="@+id/gradeDisplay"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/enterGradeActivity" />
+
+
+        </RelativeLayout>
+

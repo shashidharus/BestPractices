@@ -1,12 +1,21 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent"
         tools:context="com.teamtreehouse.oslist.MainActivity3"
         android:padding = "5dp"
         android:id="@+id/new_tag_view"
+        android:background="@drawable/border"
         >
 
         <TextView
@@ -21,14 +30,13 @@
             android:id="@+id/blank" />
         <Button
             android:id="@+id/delete"
-            android:text="Delete"
-            style="@style/buttonsWeek"
-            android:background="@drawable/mybuttons"
-            android:layout_height="25dp"
+            style="?android:attr/buttonStyleSmall"
+            android:background="@drawable/icon_document_delete"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/blank"
+            android:layout_alignParentEnd="true"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -39,13 +47,16 @@
             android:textSize="@dimen/text_size1"
             android:textStyle="bold"
             android:paddingRight="10dp"
-            android:layout_marginTop="10dp"
             android:id="@+id/classNameText"
-            android:layout_below="@id/blank"
-            android:layout_toLeftOf="@+id/courseNumberEdit"
             android:layout_alignBottom="@+id/classNameEdit"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/classNameEdit"
+            android:layout_alignRight="@+id/selectclassDaysLabel"
+            android:layout_alignEnd="@+id/selectclassDaysLabel"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="false"
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -57,8 +68,11 @@
             android:gravity="left"
             android:paddingRight="10dp"
             android:id="@+id/classNameEdit"
-            android:layout_below="@+id/blank"
-            android:layout_toRightOf="@+id/classNameText"/>
+            android:layout_below="@+id/delete"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/teachingAssistantText"
+            android:layout_toEndOf="@+id/teachingAssistantText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +84,7 @@
             android:textStyle="bold"
             android:paddingRight="10dp"
             android:id="@+id/courseIDText"
-            android:layout_toLeftOf="@+id/instructorEdit"
+            android:layout_toLeftOf="@+id/instructorSpinner"
             android:layout_alignTop="@+id/courseNumberEdit"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -104,18 +118,27 @@
 
             android:layout_marginTop="10dp" />
 
-        <EditText
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Instructor Name"
-            android:textColor="#000"
-            android:gravity="left"
-            android:textSize="@dimen/text_size1"
-
-            android:paddingRight="10dp"
+            style="@style/spinner_style"
+            android:spinnerMode="dropdown"
             android:layout_below="@+id/courseNumberEdit"
-            android:layout_toRightOf="@+id/instructorText"
-            android:id="@+id/instructorEdit" />
+            android:id="@+id/instructorSpinner"
+            android:layout_alignRight="@+id/friday1"
+            android:layout_alignEnd="@+id/friday1"
+            android:layout_toEndOf="@+id/teachingAssistantText"
+            android:layout_toRightOf="@+id/teachingAssistantText" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/spinner_style"
+            android:spinnerMode="dropdown"
+            android:id="@+id/teachingAssistantSpinner"
+            android:layout_below="@+id/instructorSpinner"
+            android:layout_toRightOf="@+id/teachingAssistantText"
+            android:layout_alignRight="@+id/friday1"
+            android:layout_alignEnd="@+id/friday1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,21 +150,11 @@
             android:textStyle="bold"
             android:paddingRight="13dp"
             android:id="@+id/teachingAssistantText"
-            android:layout_below="@id/instructorEdit"
+            android:layout_below="@id/instructorSpinner"
             android:layout_marginTop="10dp" />
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Teaching Assistant Name"
-            android:textColor="#000"
-            android:textSize="@dimen/text_size1"
-            android:gravity="left"
-            android:paddingRight="10dp"
-            android:id="@+id/teachingAssistantEdit"
-            android:layout_below="@+id/instructorEdit"
-            android:layout_toRightOf="@+id/teachingAssistantText"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,18 +166,19 @@
             android:paddingRight="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/semesterStartText"
-            android:layout_below="@id/teachingAssistantEdit"/>
+            android:layout_below="@id/teachingAssistantSpinner"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="mm/dd/yyyy"
             android:textColor="#000"
             android:textSize="@dimen/text_size1"
+            android:focusableInTouchMode="false"
             android:gravity="left"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:paddingRight="10dp"
             android:id="@+id/semesterStartEdit"
-            android:layout_below="@+id/teachingAssistantEdit"
+            android:layout_below="@+id/teachingAssistantSpinner"
             android:layout_toRightOf="@+id/semesterStartText"
             />
         <TextView
@@ -176,7 +190,7 @@
             android:textSize="@dimen/text_size1"
             android:textStyle="bold"
             android:paddingRight="15dp"
-
+            android:focusableInTouchMode="false"
             android:layout_marginTop="15dp"
             android:id="@+id/semesterEndText"
             android:layout_below="@id/semesterStartText"
@@ -190,6 +204,7 @@
             android:textSize="@dimen/text_size1"
             android:gravity="left"
             android:paddingRight="10dp"
+            android:focusableInTouchMode="false"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
@@ -357,17 +372,60 @@
 
         <Button
             android:id="@+id/save"
-            android:text="Save"
-            style="@style/buttonsWeek"
-            android:background="@drawable/mybuttons"
-            android:layout_height="35dp"
-            android:layout_width="60dp"
-            android:textSize="20dp"
+            style="?android:attr/buttonStyleSmall"
+            android:background="@drawable/ic_save"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:gravity="center"
             android:layout_below="@id/classDescription"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
-    </RelativeLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddIns"
+            android:background="@drawable/ic_add_class"
+            android:layout_alignTop="@+id/instructorSpinner"
+            android:layout_toRightOf="@+id/instructorSpinner"
+            android:layout_toEndOf="@+id/instructorSpinner" />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditIns"
+            android:background="@drawable/icon_document_edit"
+            android:layout_alignTop="@+id/imageButtonAddIns"
+            android:layout_toEndOf="@+id/saturday1"
+            android:layout_alignLeft="@+id/imageButtonEditTa"
+            android:layout_alignStart="@+id/imageButtonEditTa" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddTa"
+            android:background="@drawable/ic_add_class"
+            android:layout_alignTop="@+id/teachingAssistantSpinner"
+            android:layout_toRightOf="@+id/teachingAssistantSpinner"
+            android:layout_toEndOf="@+id/teachingAssistantSpinner" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditTa"
+            android:background="@drawable/icon_document_edit"
+            android:layout_alignTop="@+id/imageButtonAddTa"
+            android:layout_alignRight="@+id/semesterStartEdit"
+            android:layout_alignEnd="@+id/semesterStartEdit" />
+
+    </RelativeLayout>
 </ScrollView>
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#ffeeeeee"
+            android:choiceMode="singleChoice" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

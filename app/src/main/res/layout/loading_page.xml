@@ -9,13 +9,23 @@
     <TextView android:text="Key OutComes Tracker Tool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:textSize="40dp"
         android:gravity="center"
-
         android:background="@drawable/mybuttons"
         android:textStyle="bold"
-        android:id="@+id/AppName"/>
+        android:id="@+id/AppName"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/ic_uic_logo"
+        android:layout_marginBottom="102dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

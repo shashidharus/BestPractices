@@ -16,7 +16,7 @@ public class AboutUsPage extends ActionBarActivity implements OnClickListener {
         setContentView(R.layout.activity_about_us_page);
         Button contact = (Button) findViewById(R.id.contactButton);
 
-
+        getSupportActionBar().setTitle("About");
          contact.setOnClickListener(AboutUsPage.this);
 
 
